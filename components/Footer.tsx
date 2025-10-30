@@ -16,8 +16,8 @@ export default function Footer() {
               <span className="text-xl font-bold">Plenti Prime</span>
             </div>
             <p style={{ fontSize: 'var(--font-size-small)', color: 'var(--color-grey-00)' }}>
-              Subskrypcja premium na wynajem sprzętu elektronicznego. Miesięczny
-              budżet, ekskluzywne zniżki i rozszerzona ochrona.
+              Subskrypcja premium na wynajem sprzętu elektronicznego. Miesięczna
+              subskrypcja, nieograniczone zniżki i rozszerzona ochrona.
             </p>
           </div>
 

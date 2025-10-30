@@ -4,7 +4,7 @@ export default function WalletExplanation() {
       number: "1",
       title: "Wybierasz plan",
       description:
-        "Wybierz plan odpowiedni dla Ciebie (100 zł, 200 zł, 500 zł lub 1000 zł miesięcznie)",
+        "Wybierz plan odpowiedni dla Ciebie na wynajem produktów elektronicznych",
       icon: "💳",
     },
     {

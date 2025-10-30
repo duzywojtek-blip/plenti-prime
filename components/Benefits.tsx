@@ -76,7 +76,7 @@ export default function Benefits() {
             Dlaczego Plenti Prime?
           </h2>
           <p className="max-w-2xl mx-auto" style={{ fontSize: 'var(--font-size-base)', lineHeight: 'var(--line-height-base)', color: 'var(--color-grey-00)' }}>
-            Ekskluzywne korzyści dla najbardziej aktywnych użytkowników
+            Nieograniczone korzyści dla najbardziej aktywnych użytkowników
           </p>
         </div>
 

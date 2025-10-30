@@ -24,7 +24,7 @@ export default function Hero() {
 
             <p className="mb-8 max-w-xl" style={{ fontSize: 'var(--font-size-base)', lineHeight: 'var(--line-height-base)', color: 'var(--color-grey-00)' }}>
               Miesięczna subskrypcja na wynajem produktów elektronicznych.
-              Ekskluzywne zniżki i rozszerzone Plenti Care 90%.
+              Nieograniczone zniżki i rozszerzone Plenti Care 90%.
             </p>
 
             <button
@@ -55,65 +55,16 @@ export default function Hero() {
           </div>
 
           {/* Right Column - Visual */}
-          <div className="relative">
-            <div
-              className="bg-gradient-to-br from-[var(--color-light-purple)] to-[var(--color-very-light-purple)]"
+          <div className="relative max-w-[600px] mx-auto">
+            <img
+              src="/vr-hero.jpg"
+              alt="Mężczyzna w okularach VR korzystający z produktów elektronicznych"
+              className="w-full h-auto object-cover"
               style={{
                 borderRadius: 'var(--radius-medium-0)',
-                padding: 'var(--spacing-large-0)',
-                boxShadow: 'var(--shadow-select)'
+                boxShadow: 'var(--shadow-drop)'
               }}
-            >
-              <div className="text-center">
-                <div className="text-6xl mb-4">💻📱⌨️</div>
-                <p className="font-semibold" style={{ fontSize: 'var(--font-size-base)', color: 'var(--color-black)' }}>
-                  Laptopy • Tablety • Telefony • Akcesoria
-                </p>
-                <p className="mt-2" style={{ fontSize: 'var(--font-size-base)', color: 'var(--color-grey-00)' }}>
-                  Wypożycz najnowszy sprzęt elektroniczny
-                </p>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-8">
-                <div
-                  className="text-center"
-                  style={{
-                    backgroundColor: 'var(--color-white)',
-                    borderRadius: 'var(--radius-small-0)',
-                    padding: 'var(--spacing-medium-0)',
-                    boxShadow: 'var(--shadow-select)'
-                  }}
-                >
-                  <p className="font-bold" style={{ fontSize: '24px', color: 'var(--color-purple)' }}>1000+</p>
-                  <p className="mt-1" style={{ fontSize: 'var(--font-size-small)', color: 'var(--color-grey-00)' }}>Produktów</p>
-                </div>
-                <div
-                  className="text-center"
-                  style={{
-                    backgroundColor: 'var(--color-white)',
-                    borderRadius: 'var(--radius-small-0)',
-                    padding: 'var(--spacing-medium-0)',
-                    boxShadow: 'var(--shadow-select)'
-                  }}
-                >
-                  <p className="font-bold" style={{ fontSize: '24px', color: 'var(--color-success)' }}>90%</p>
-                  <p className="mt-1" style={{ fontSize: 'var(--font-size-small)', color: 'var(--color-grey-00)' }}>Ochrona</p>
-                </div>
-                <div
-                  className="text-center"
-                  style={{
-                    backgroundColor: 'var(--color-white)',
-                    borderRadius: 'var(--radius-small-0)',
-                    padding: 'var(--spacing-medium-0)',
-                    boxShadow: 'var(--shadow-select)'
-                  }}
-                >
-                  <p className="font-bold" style={{ fontSize: '24px', color: 'var(--color-purple)' }}>15%</p>
-                  <p className="mt-1" style={{ fontSize: 'var(--font-size-small)', color: 'var(--color-grey-00)' }}>Zniżka</p>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </div>
       </div>

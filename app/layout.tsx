@@ -10,14 +10,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Plenti Prime - Subskrypcja sprzętu elektronicznego",
   description:
-    "Miesięczna subskrypcja na wynajem produktów elektronicznych. Ekskluzywne zniżki do 15% i rozszerzone Plenti Care 90%. Laptopy, tablety, telefony dla domu i firm.",
+    "Miesięczna subskrypcja na wynajem produktów elektronicznych. Nieograniczone zniżki do 15% i rozszerzone Plenti Care 90%. Laptopy, tablety, telefony dla domu i firm.",
   keywords:
     "plenti prime, wynajem sprzętu elektronicznego, subskrypcja, laptopy, tablety, telefony, akcesoria, zniżki, plenti care",
   authors: [{ name: "Plenti" }],
   openGraph: {
     title: "Plenti Prime - Subskrypcja sprzętu elektronicznego",
     description:
-      "Miesięczna subskrypcja na wynajem produktów elektronicznych. Ekskluzywne zniżki i rozszerzona ochrona",
+      "Miesięczna subskrypcja na wynajem produktów elektronicznych. Nieograniczone zniżki i rozszerzona ochrona",
     url: "https://plenti.app/prime",
     siteName: "Plenti Prime",
     locale: "pl_PL",

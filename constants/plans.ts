@@ -92,7 +92,7 @@ export const BENEFITS: Benefit[] = [
   {
     icon: "discount",
     title: "Stałe zniżki do 15%",
-    description: "Ekskluzywne rabaty na wszystkie wynajmy przez cały rok",
+    description: "Nieograniczone rabaty na wszystkie wynajmy przez cały rok",
   },
   {
     icon: "truck",
