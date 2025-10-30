@@ -14,29 +14,16 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="text-center md:text-left">
-            <div
-              className="inline-block mb-4 font-semibold"
-              style={{
-                padding: '8px 16px',
-                backgroundColor: 'var(--color-light-purple)',
-                color: 'var(--color-purple)',
-                borderRadius: '9999px',
-                fontSize: 'var(--font-size-small)'
-              }}
-            >
-              🏆 Subskrypcja Premium
-            </div>
-
             <h1 className="font-bold mb-6 leading-tight" style={{ fontSize: 'clamp(40px, 6vw, var(--font-size-h1))', lineHeight: 'var(--line-height-h1)', color: 'var(--color-black)' }}>
               Plenti Prime
             </h1>
 
             <p className="font-medium mb-4" style={{ fontSize: 'clamp(20px, 3vw, var(--font-size-h4))', lineHeight: 'var(--line-height-h4)', color: 'var(--color-grey-00)' }}>
-              Subskrypcja Premium na Wynajem Sprzętu Elektronicznego
+              Subskrypcja sprzętu elektronicznego
             </p>
 
             <p className="mb-8 max-w-xl" style={{ fontSize: 'var(--font-size-base)', lineHeight: 'var(--line-height-base)', color: 'var(--color-grey-00)' }}>
-              Miesięczny budżet na wynajem laptopów, tabletów i akcesoriów.
+              Miesięczna subskrypcja na wynajem produktów elektronicznych.
               Ekskluzywne zniżki i rozszerzone Plenti Care 90%.
             </p>
 
@@ -65,10 +52,6 @@ export default function Hero() {
             >
               Zobacz plany
             </button>
-
-            <p className="mt-6" style={{ fontSize: 'var(--font-size-small)', color: 'var(--color-grey-00)' }}>
-              ✓ Bez ukrytych kosztów &nbsp;·&nbsp; ✓ Anuluj kiedy chcesz &nbsp;·&nbsp; ✓ 12 miesięcy
-            </p>
           </div>
 
           {/* Right Column - Visual */}

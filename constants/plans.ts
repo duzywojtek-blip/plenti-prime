@@ -3,7 +3,7 @@ import { PrimePlan, Benefit, FAQItem } from "@/types/plans"
 export const PRIME_PLANS: PrimePlan[] = [
   {
     id: "starter",
-    name: "STARTER",
+    name: "Starter",
     price: 100,
     duration: 12,
     monthlyCredit: 100,
@@ -11,7 +11,7 @@ export const PRIME_PLANS: PrimePlan[] = [
     discount: 5,
     freeDeliveries: 1,
     benefits: [
-      "100 zł kredytu miesięcznie",
+      "100 zł miesięcznie na wynajem",
       "Plenti Care 90%",
       "5% stała zniżka",
       "1 darmowa dostawa/rok",
@@ -20,7 +20,7 @@ export const PRIME_PLANS: PrimePlan[] = [
   },
   {
     id: "advanced",
-    name: "ADVANCED",
+    name: "Advanced",
     price: 200,
     duration: 12,
     monthlyCredit: 200,
@@ -28,7 +28,7 @@ export const PRIME_PLANS: PrimePlan[] = [
     discount: 8,
     freeDeliveries: 2,
     benefits: [
-      "200 zł kredytu miesięcznie",
+      "200 zł miesięcznie na wynajem",
       "Plenti Care 90%",
       "8% stała zniżka",
       "2 darmowe dostawy/rok",
@@ -38,15 +38,16 @@ export const PRIME_PLANS: PrimePlan[] = [
   },
   {
     id: "pro",
-    name: "PRO",
+    name: "Pro",
     price: 500,
     duration: 12,
+    isPopular: true,
     monthlyCredit: 500,
     plentiCare: 90,
     discount: 12,
     freeDeliveries: 3,
     benefits: [
-      "500 zł kredytu miesięcznie",
+      "500 zł miesięcznie na wynajem",
       "Plenti Care 90%",
       "12% stała zniżka",
       "3 darmowe dostawy/rok",
@@ -57,16 +58,15 @@ export const PRIME_PLANS: PrimePlan[] = [
   },
   {
     id: "premium",
-    name: "PREMIUM",
+    name: "Premium",
     price: 1000,
     duration: 12,
-    isPopular: true,
     monthlyCredit: 1000,
     plentiCare: 90,
     discount: 15,
     freeDeliveries: 5,
     benefits: [
-      "1000 zł kredytu miesięcznie",
+      "1000 zł miesięcznie na wynajem",
       "Plenti Care 90%",
       "15% stała zniżka",
       "5 darmowych dostaw/rok",
@@ -81,8 +81,8 @@ export const PRIME_PLANS: PrimePlan[] = [
 export const BENEFITS: Benefit[] = [
   {
     icon: "wallet",
-    title: "Miesięczny kredyt",
-    description: "Otrzymuj miesięczny budżet na wynajem laptopów, tabletów i akcesoriów elektronicznych",
+    title: "Miesięczna subskrypcja",
+    description: "Wybierz kwotę na wynajem produktów elektronicznych dla domu i firm",
   },
   {
     icon: "shield",
@@ -108,14 +108,14 @@ export const FAQ_ITEMS: FAQItem[] = [
       "Subskrypcja Plenti Prime trwa 12 miesięcy z miesięczną płatnością. Po zakończeniu okresu możesz odnowić subskrypcję na kolejny rok.",
   },
   {
-    question: "Co się dzieje z niewykorzystanym kredytem?",
+    question: "Co się dzieje z niewykorzystaną kwotą?",
     answer:
-      "Niewykorzystany kredyt kumuluje się przez cały okres 12-miesięcznej subskrypcji. Skumulowany kredyt wygasa 31 marca (dla subskrypcji kończących się VII-XII) lub 30 września (dla subskrypcji kończących się I-VI) po zakończeniu rocznej subskrypcji.",
+      "Niewykorzystana kwota kumuluje się przez cały okres 12-miesięcznej subskrypcji. Skumulowana kwota wygasa 31 marca (dla subskrypcji kończących się VII-XII) lub 30 września (dla subskrypcji kończących się I-VI) po zakończeniu rocznej subskrypcji.",
   },
   {
     question: "Czy mogę anulować subskrypcję?",
     answer:
-      "Subskrypcja Prime to zobowiązanie na 12 miesięcy. Możesz anulować subskrypcję, jednak nie otrzymasz zwrotu za niewykorzystane miesiące. Niewykorzystany kredyt pozostanie dostępny do końca okresu subskrypcji.",
+      "Subskrypcja Prime to zobowiązanie na 12 miesięcy. Możesz anulować subskrypcję, jednak nie otrzymasz zwrotu za niewykorzystane miesiące. Niewykorzystana kwota pozostanie dostępna do końca okresu subskrypcji.",
   },
   {
     question: "Jak działa Plenti Care 90%?",

@@ -97,9 +97,9 @@ export default function Footer() {
           <div className="mb-6 leading-relaxed" style={{ fontSize: 'var(--font-size-small)', color: 'var(--color-grey-00)' }}>
             <p>
               * Subskrypcja Plenti Prime trwa 12 miesięcy z miesięczną
-              płatnością. Miesięczny kredyt na wynajem jest równy kwocie
-              subskrypcji. Niewykorzystany kredyt kumuluje się przez cały okres
-              subskrypcji. Skumulowany kredyt wygasa 31 marca (dla subskrypcji
+              płatnością. Miesięczna kwota na wynajem jest równa kwocie
+              subskrypcji. Niewykorzystana kwota kumuluje się przez cały okres
+              subskrypcji. Skumulowana kwota wygasa 31 marca (dla subskrypcji
               kończących się VII-XII) lub 30 września (dla subskrypcji
               kończących się I-VI) po zakończeniu rocznej subskrypcji. Zniżki
               Prime łączą się z promocjami sezonowymi. Plenti Care 90% obejmuje

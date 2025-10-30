@@ -41,7 +41,7 @@ export default function PricingCard({ plan }: PricingCardProps) {
               boxShadow: 'var(--shadow-drop)'
             }}
           >
-            NAJPOPULARNIEJSZY
+            Pro
           </span>
         </div>
       )}
