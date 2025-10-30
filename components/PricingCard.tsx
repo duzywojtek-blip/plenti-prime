@@ -29,19 +29,20 @@ export default function PricingCard({ plan }: PricingCardProps) {
     >
       {/* Popular Badge */}
       {plan.isPopular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span
-            className="font-semibold"
             style={{
               backgroundColor: 'var(--color-purple)',
               color: 'var(--color-white)',
               padding: '8px 16px',
               borderRadius: '9999px',
-              fontSize: 'var(--font-size-small)',
-              boxShadow: 'var(--shadow-drop)'
+              fontSize: '14px',
+              fontWeight: '500',
+              boxShadow: 'var(--shadow-drop)',
+              whiteSpace: 'nowrap'
             }}
           >
-            Pro
+            Najczęściej wybierane
           </span>
         </div>
       )}
