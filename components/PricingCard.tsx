@@ -8,7 +8,7 @@ interface PricingCardProps {
 
 export default function PricingCard({ plan }: PricingCardProps) {
   const handleSelectPlan = () => {
-    const checkoutUrl = `https://plenti.app/checkout?plan=${plan.price}&duration=${plan.duration}&type=prime`
+    const checkoutUrl = `/checkout?plan=${plan.price}&duration=${plan.duration}&type=prime`
     window.location.href = checkoutUrl
   }
 
