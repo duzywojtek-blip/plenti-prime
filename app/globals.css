@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* === PLENTI DESIGN SYSTEM === */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* COLORS - Primary & Brand */
+  --color-purple: #5c42ff;
+  --color-dark-purple: #523dda;
+  --color-light-purple: #e8e5ff;
+  --color-very-light-purple: #f3f1ff;
+  --color-rose: #d376ff;
+  --color-green: #51d0dc;
+  --color-blue: #00c1fc;
+
+  /* COLORS - Neutrals */
+  --color-white: #ffffff;
+  --color-grey-05: #f6f7f9;
+  --color-grey-04: #e7ecf3;
+  --color-grey-00: #5e7087;
+  --color-black: #060e18;
+
+  /* COLORS - Semantic */
+  --color-success: #24b898;
+  --color-danger: #d42647;
+  --color-warning: #f48d41;
+
+  /* SPACING */
+  --spacing-small-0: 8px;
+  --spacing-medium-0: 16px;
+  --spacing-medium-2: 24px;
+  --spacing-medium-3: 32px;
+  --spacing-large-0: 48px;
+  --spacing-large-2: 72px;
+  --spacing-large-3: 128px;
+
+  /* RADIUS */
+  --radius-small-0: 8px;
+  --radius-medium-0: 16px;
+  --radius-large-0: 48px;
+
+  /* SHADOWS */
+  --shadow-drop: 0px 4px 12px rgba(27, 34, 57, 0.2);
+  --shadow-drop-active: 0px 4px 40px #5c42ff;
+  --shadow-select: 0px 8px 16px rgba(10, 13, 39, 0.08);
+
+  /* TYPOGRAPHY */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font sizes */
+  --font-size-h1: 56px;
+  --line-height-h1: 60px;
+  --font-size-h2: 48px;
+  --line-height-h2: 56px;
+  --font-size-h3: 40px;
+  --line-height-h3: 48px;
+  --font-size-h4: 32px;
+  --line-height-h4: 40px;
+  --font-size-base: 16px;
+  --line-height-base: 24px;
+  --font-size-small: 14px;
+  --line-height-small: 20px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }

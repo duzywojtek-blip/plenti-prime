@@ -11,13 +11,13 @@ export default function FAQ() {
   }
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section style={{ backgroundColor: 'var(--color-grey-05)', paddingTop: 'var(--spacing-large-0)', paddingBottom: 'var(--spacing-large-0)' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center" style={{ marginBottom: 'var(--spacing-large-0)' }}>
+          <h2 className="font-bold mb-4" style={{ fontSize: 'var(--font-size-h3)', lineHeight: 'var(--line-height-h3)', color: 'var(--color-black)' }}>
             Często zadawane pytania
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto" style={{ fontSize: 'var(--font-size-base)', lineHeight: 'var(--line-height-base)', color: 'var(--color-grey-00)' }}>
             Wszystko, co musisz wiedzieć o Plenti Prime
           </p>
         </div>
@@ -26,24 +26,45 @@ export default function FAQ() {
           {FAQ_ITEMS.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+              className="overflow-hidden border"
+              style={{
+                backgroundColor: 'var(--color-white)',
+                borderRadius: 'var(--radius-medium-0)',
+                boxShadow: 'var(--shadow-select)',
+                borderColor: 'var(--color-grey-04)'
+              }}
             >
               <button
                 onClick={() => toggleQuestion(index)}
-                className="w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full text-left flex items-center justify-between transition-colors"
+                style={{
+                  padding: 'var(--spacing-medium-2)',
+                  backgroundColor: openIndex === index ? 'var(--color-very-light-purple)' : 'transparent'
+                }}
+                onMouseEnter={(e) => {
+                  if (openIndex !== index) {
+                    e.currentTarget.style.backgroundColor = 'var(--color-grey-05)'
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (openIndex !== index) {
+                    e.currentTarget.style.backgroundColor = 'transparent'
+                  }
+                }}
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-answer-${index}`}
               >
-                <span className="text-lg font-semibold text-gray-900 pr-8">
+                <span className="font-semibold pr-8" style={{ fontSize: 'var(--font-size-base)', color: 'var(--color-black)' }}>
                   {item.question}
                 </span>
                 <svg
-                  className={`w-6 h-6 text-[#2D5BFF] flex-shrink-0 transition-transform duration-200 ${
+                  className={`w-6 h-6 flex-shrink-0 transition-transform duration-200 ${
                     openIndex === index ? "transform rotate-180" : ""
                   }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  style={{ color: 'var(--color-purple)' }}
                 >
                   <path
                     strokeLinecap="round"
@@ -60,7 +81,7 @@ export default function FAQ() {
                   openIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
+                <div className="leading-relaxed" style={{ padding: '0 var(--spacing-medium-2) var(--spacing-medium-2)', fontSize: 'var(--font-size-base)', color: 'var(--color-grey-00)' }}>
                   {item.answer}
                 </div>
               </div>

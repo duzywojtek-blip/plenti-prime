@@ -24,13 +24,13 @@ export default function WalletExplanation() {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-white" style={{ paddingTop: 'var(--spacing-large-2)', paddingBottom: 'var(--spacing-large-2)' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center" style={{ marginBottom: 'var(--spacing-large-0)' }}>
+          <h2 className="font-bold mb-4" style={{ fontSize: 'var(--font-size-h2)', lineHeight: 'var(--line-height-h2)', color: 'var(--color-black)' }}>
             Jak działa Twój Wallet?
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto" style={{ fontSize: 'var(--font-size-base)', lineHeight: 'var(--line-height-base)', color: 'var(--color-grey-00)' }}>
             Prosty i przejrzysty system miesięcznego kredytu
           </p>
         </div>
@@ -38,41 +38,51 @@ export default function WalletExplanation() {
         {/* Steps */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
           {steps.map((step) => (
-            <div key={step.number} className="relative">
-              {/* Connector Line (hidden on mobile) */}
-              {step.number !== "3" && (
-                <div className="hidden md:block absolute top-12 left-[60%] w-full h-0.5 bg-gray-200 z-0" />
-              )}
-
-              <div className="relative z-10 text-center">
-                {/* Step Number Circle */}
-                <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 relative">
-                  <span className="text-4xl">{step.icon}</span>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#2D5BFF] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">
-                      {step.number}
-                    </span>
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600">{step.description}</p>
+            <div key={step.number} className="text-center">
+              {/* Step Number Circle */}
+              <div
+                className="flex items-center justify-center mx-auto mb-4 font-bold"
+                style={{
+                  width: '64px',
+                  height: '64px',
+                  backgroundColor: 'var(--color-purple)',
+                  borderRadius: '50%',
+                  color: 'var(--color-white)',
+                  fontSize: 'var(--font-size-h2)',
+                  lineHeight: 'var(--line-height-h2)'
+                }}
+              >
+                {step.number}
               </div>
+
+              <h3 className="font-semibold mb-2" style={{ fontSize: 'var(--font-size-h4)', lineHeight: 'var(--line-height-h4)', color: 'var(--color-black)' }}>
+                {step.title}
+              </h3>
+              <p style={{ fontSize: 'var(--font-size-base)', lineHeight: 'var(--line-height-base)', color: 'var(--color-grey-00)' }}>
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Disclaimer Box */}
-        <div className="max-w-4xl mx-auto bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <div
+          className="max-w-4xl mx-auto border"
+          style={{
+            backgroundColor: 'var(--color-very-light-purple)',
+            borderColor: 'var(--color-light-purple)',
+            borderRadius: 'var(--radius-medium-0)',
+            padding: 'var(--spacing-medium-2)'
+          }}
+        >
           <div className="flex items-start">
             <div className="flex-shrink-0">
               <svg
-                className="w-6 h-6 text-[#2D5BFF]"
+                className="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                style={{ color: 'var(--color-purple)' }}
               >
                 <path
                   strokeLinecap="round"
@@ -83,7 +93,7 @@ export default function WalletExplanation() {
               </svg>
             </div>
             <div className="ml-4">
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="leading-relaxed" style={{ fontSize: 'var(--font-size-small)', color: 'var(--color-black)' }}>
                 <strong>Ważne:</strong> Skumulowany kredyt wygasa po zakończeniu
                 rocznej subskrypcji:{" "}
                 <strong>31 marca</strong> (dla subskrypcji kończących się

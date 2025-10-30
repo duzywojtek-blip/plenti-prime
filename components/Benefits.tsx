@@ -69,30 +69,35 @@ const iconComponents = {
 
 export default function Benefits() {
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-white" style={{ paddingTop: 'var(--spacing-large-0)', paddingBottom: 'var(--spacing-large-0)' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center" style={{ marginBottom: 'var(--spacing-large-0)' }}>
+          <h2 className="font-bold mb-4" style={{ fontSize: 'var(--font-size-h3)', lineHeight: 'var(--line-height-h3)', color: 'var(--color-black)' }}>
             Dlaczego Plenti Prime?
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto" style={{ fontSize: 'var(--font-size-base)', lineHeight: 'var(--line-height-base)', color: 'var(--color-grey-00)' }}>
             Ekskluzywne korzyści dla najbardziej aktywnych użytkowników
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {BENEFITS.map((benefit, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200 border border-gray-100"
+              className="flex items-center gap-3 border transition-all duration-200 hover:shadow-[var(--shadow-drop)]"
+              style={{
+                backgroundColor: 'var(--color-very-light-purple)',
+                borderRadius: 'var(--radius-medium-0)',
+                borderColor: 'var(--color-grey-04)',
+                padding: '12px 16px'
+              }}
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-[#2D5BFF]">
+              <div style={{ color: 'var(--color-purple)' }}>
                 {iconComponents[benefit.icon as keyof typeof iconComponents]}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <span className="font-medium" style={{ fontSize: 'var(--font-size-small)', lineHeight: 'var(--line-height-small)', color: 'var(--color-black)' }}>
                 {benefit.title}
-              </h3>
-              <p className="text-gray-600">{benefit.description}</p>
+              </span>
             </div>
           ))}
         </div>
