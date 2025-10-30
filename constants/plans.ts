@@ -82,7 +82,7 @@ export const BENEFITS: Benefit[] = [
   {
     icon: "wallet",
     title: "Miesięczny kredyt",
-    description: "Otrzymuj miesięczny budżet na wynajem sprzętu sportowego",
+    description: "Otrzymuj miesięczny budżet na wynajem laptopów, tabletów i akcesoriów elektronicznych",
   },
   {
     icon: "shield",

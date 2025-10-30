@@ -23,12 +23,12 @@ export default function Hero() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
-              Subskrypcja Premium na Wynajem Sprzętu
+              Subskrypcja Premium na Wynajem Sprzętu Elektronicznego
             </p>
 
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
-              Miesięczny budżet, ekskluzywne zniżki i rozszerzone Plenti Care.
-              Wypróbuj najlepszy sprzęt sportowy bez zobowiązań.
+              Miesięczny budżet na wynajem laptopów, tabletów i akcesoriów.
+              Ekskluzywne zniżki i rozszerzone Plenti Care 90%.
             </p>
 
             <button
@@ -48,12 +48,12 @@ export default function Hero() {
           <div className="relative">
             <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-12 shadow-2xl">
               <div className="text-center">
-                <div className="text-6xl mb-4">🎿⛷️🏂</div>
+                <div className="text-6xl mb-4">💻📱⌨️</div>
                 <p className="text-gray-700 font-semibold text-lg">
-                  Narty • Snowboardy • Kaski • Buty
+                  Laptopy • Tablety • Telefony • Akcesoria
                 </p>
                 <p className="text-gray-600 mt-2">
-                  Wypożycz sprzęt premium na każdy sezon
+                  Wypożycz najnowszy sprzęt elektroniczny
                 </p>
               </div>
 

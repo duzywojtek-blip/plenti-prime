@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="text-xl font-bold">Plenti Prime</span>
             </div>
             <p className="text-gray-400 text-sm">
-              Subskrypcja premium na wynajem sprzętu sportowego. Miesięczny
+              Subskrypcja premium na wynajem sprzętu elektronicznego. Miesięczny
               budżet, ekskluzywne zniżki i rozszerzona ochrona.
             </p>
           </div>

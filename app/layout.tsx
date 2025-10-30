@@ -8,16 +8,16 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Plenti Prime - Subskrypcja Premium na Wynajem Sprzętu Sportowego",
+  title: "Plenti Prime - Subskrypcja Premium na Wynajem Sprzętu Elektronicznego",
   description:
-    "Miesięczny budżet, ekskluzywne zniżki do 15% i rozszerzone Plenti Care 90%. Wypożycz najlepszy sprzęt sportowy z subskrypcją Prime.",
+    "Miesięczny budżet, ekskluzywne zniżki do 15% i rozszerzone Plenti Care 90%. Wypożycz najlepszy sprzęt elektroniczny: laptopy, tablety, telefony z subskrypcją Prime.",
   keywords:
-    "plenti prime, wynajem sprzętu sportowego, subskrypcja, narty, snowboardy, zniżki, plenti care",
+    "plenti prime, wynajem sprzętu elektronicznego, subskrypcja, laptopy, tablety, telefony, akcesoria, zniżki, plenti care",
   authors: [{ name: "Plenti" }],
   openGraph: {
     title: "Plenti Prime - Subskrypcja Premium",
     description:
-      "Miesięczny budżet na wynajem sprzętu, ekskluzywne zniżki i rozszerzona ochrona",
+      "Miesięczny budżet na wynajem laptopów, tabletów i telefonów. Ekskluzywne zniżki i rozszerzona ochrona",
     url: "https://plenti.app/prime",
     siteName: "Plenti Prime",
     locale: "pl_PL",
