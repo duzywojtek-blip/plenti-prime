@@ -1,3 +1,5 @@
+"use client"
+
 import { PrimePlan } from "@/types/plans"
 
 interface PricingCardProps {
