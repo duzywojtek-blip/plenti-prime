@@ -9,26 +9,21 @@ function CheckoutContent() {
   const duration = searchParams.get("duration") || "12"
   const type = searchParams.get("type") || "prime"
 
-  const [deliveryMethod, setDeliveryMethod] = useState<"pickup" | "courier" | "paczkomat">("pickup")
   const [paymentMethod, setPaymentMethod] = useState<"card" | "blik" | "transfer">("card")
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
-    street: "",
-    postalCode: "",
-    city: "",
   })
 
   // Price calculation
   const basePrice = parseInt(plan)
   const originalPrice = Math.round(basePrice * 1.35) // Show 35% higher original price
-  const deliveryCost = deliveryMethod === "pickup" ? 0 : deliveryMethod === "paczkomat" ? 14 : 25
-  const totalPrice = basePrice + deliveryCost
+  const totalPrice = basePrice
 
   const handleSubmit = () => {
-    console.log("Order submitted:", { plan, duration, type, deliveryMethod, paymentMethod, formData })
+    console.log("Order submitted:", { plan, duration, type, paymentMethod, formData })
     // TODO: Redirect to payment gateway or success page
   }
 
@@ -103,26 +98,19 @@ function CheckoutContent() {
                 <span style={{ fontSize: "var(--font-size-base)", color: "var(--color-grey-00)" }}>Wynajem Plenti Prime ({duration} miesięcy)</span>
                 <div className="flex items-center gap-2">
                   <span style={{ fontSize: "var(--font-size-base)", color: "var(--color-grey-00)", textDecoration: "line-through" }}>
-                    {originalPrice} zł
+                    {originalPrice} zł/miesiąc
                   </span>
                   <span className="font-bold" style={{ fontSize: "var(--font-size-base)", color: "var(--color-danger)" }}>
-                    {basePrice} zł
+                    {basePrice} zł/miesiąc
                   </span>
                 </div>
-              </div>
-
-              <div className="flex justify-between items-center">
-                <span style={{ fontSize: "var(--font-size-base)", color: "var(--color-grey-00)" }}>Dostawa zamówień</span>
-                <span style={{ fontSize: "var(--font-size-base)", color: "var(--color-grey-00)" }}>
-                  {deliveryCost === 0 ? "--" : `${deliveryCost}`} zł
-                </span>
               </div>
 
               <div style={{ height: "1px", backgroundColor: "var(--color-grey-04)", margin: "16px 0" }} />
 
               <div className="flex justify-between items-center">
                 <span className="font-bold" style={{ fontSize: "20px", color: "var(--color-black)" }}>Do zapłaty:</span>
-                <span className="font-bold" style={{ fontSize: "24px", color: "var(--color-purple)" }}>{totalPrice} zł</span>
+                <span className="font-bold" style={{ fontSize: "24px", color: "var(--color-purple)" }}>{totalPrice} zł/miesiąc</span>
               </div>
             </div>
           </div>
@@ -137,44 +125,8 @@ function CheckoutContent() {
             }}
           >
             <p style={{ fontSize: "var(--font-size-small)", lineHeight: "var(--line-height-small)", color: "var(--color-purple)" }}>
-              Opłatę pobierzemy dopiero po zmianie statusów zamówień na &apos;W realizacji&apos;. O każdej płatności powiadomimy Cię w wiadomości e-mail.
+              Subskrypcja jest na 12 miesięcy. Płatność będzie pobierana automatycznie co miesiąc. Możesz anulować w dowolnym momencie.
             </p>
-          </div>
-
-          {/* Delivery Method Section */}
-          <div className="mb-6">
-            <h3 className="font-semibold mb-4" style={{ fontSize: "18px", color: "var(--color-black)" }}>Metoda dostawy</h3>
-            <div className="space-y-3">
-              {[
-                { id: "pickup", label: "Odbiór osobisty", cost: "0 zł" },
-                { id: "courier", label: "Kurier", cost: "25 zł" },
-                { id: "paczkomat", label: "Paczkomat", cost: "14 zł" },
-              ].map((method) => (
-                <label
-                  key={method.id}
-                  className="flex items-center p-4 cursor-pointer border"
-                  style={{
-                    borderRadius: "var(--radius-small-0)",
-                    borderColor: deliveryMethod === method.id ? "var(--color-purple)" : "var(--color-grey-04)",
-                    backgroundColor: deliveryMethod === method.id ? "var(--color-very-light-purple)" : "transparent",
-                  }}
-                >
-                  <input
-                    type="radio"
-                    name="delivery"
-                    value={method.id}
-                    checked={deliveryMethod === method.id}
-                    onChange={(e) => setDeliveryMethod(e.target.value as any)}
-                    className="mr-3"
-                    style={{ accentColor: "var(--color-purple)" }}
-                  />
-                  <span className="flex-grow" style={{ fontSize: "var(--font-size-base)", color: "var(--color-black)" }}>
-                    {method.label}
-                  </span>
-                  <span style={{ fontSize: "var(--font-size-base)", color: "var(--color-grey-00)" }}>{method.cost}</span>
-                </label>
-              ))}
-            </div>
           </div>
 
           {/* Billing Information */}
@@ -231,53 +183,6 @@ function CheckoutContent() {
               />
             </div>
           </div>
-
-          {/* Delivery Address (conditional) */}
-          {deliveryMethod !== "pickup" && (
-            <div className="mb-6">
-              <h3 className="font-semibold mb-4" style={{ fontSize: "18px", color: "var(--color-black)" }}>Adres dostawy</h3>
-              <div className="grid grid-cols-1 gap-4">
-                <input
-                  type="text"
-                  placeholder="Ulica i numer"
-                  value={formData.street}
-                  onChange={(e) => setFormData({ ...formData, street: e.target.value })}
-                  className="border p-3"
-                  style={{
-                    borderRadius: "var(--radius-small-0)",
-                    borderColor: "var(--color-grey-04)",
-                    fontSize: "var(--font-size-base)",
-                  }}
-                />
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Kod pocztowy"
-                    value={formData.postalCode}
-                    onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
-                    className="border p-3"
-                    style={{
-                      borderRadius: "var(--radius-small-0)",
-                      borderColor: "var(--color-grey-04)",
-                      fontSize: "var(--font-size-base)",
-                    }}
-                  />
-                  <input
-                    type="text"
-                    placeholder="Miasto"
-                    value={formData.city}
-                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="border p-3"
-                    style={{
-                      borderRadius: "var(--radius-small-0)",
-                      borderColor: "var(--color-grey-04)",
-                      fontSize: "var(--font-size-base)",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          )}
 
           {/* Payment Method */}
           <div className="mb-8">
@@ -340,15 +245,15 @@ function CheckoutContent() {
           </button>
 
           {/* Payment Icons */}
-          <div className="mt-6 text-center">
-            <p className="mb-3" style={{ fontSize: "var(--font-size-small)", color: "var(--color-grey-00)" }}>
+          <div className="mt-6 flex items-center justify-center gap-4">
+            <span style={{ fontSize: "var(--font-size-small)", color: "var(--color-grey-00)" }}>
               Bezpieczne płatności
-            </p>
-            <div className="flex items-center justify-center gap-4">
-              <span style={{ fontSize: "24px" }}>💳</span>
-              <span style={{ fontSize: "24px" }}>💰</span>
-              <span style={{ fontSize: "24px" }}>🍎</span>
-              <span style={{ fontSize: "24px" }}>📱</span>
+            </span>
+            <div className="flex items-center gap-3">
+              <img src="/payment-visa.svg" alt="Visa" className="h-6" />
+              <img src="/payment-mastercard.svg" alt="Mastercard" className="h-6" />
+              <img src="/payment-apple-pay.svg" alt="Apple Pay" className="h-6" />
+              <img src="/payment-google-pay.svg" alt="Google Pay" className="h-6" />
             </div>
           </div>
         </div>
